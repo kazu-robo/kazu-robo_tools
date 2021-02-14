@@ -31,8 +31,8 @@ while "${during_check}"
 do
     read -p "width (pixel) : " width
     read -p "height (pixel) : " height
-    read -p "x of the left-up corner (pixel) : " corner_x
-    read -p "y of the left-up corner (pixel) : " corner_y
+    read -p "x of the upper left corner (pixel) : " corner_x
+    read -p "y of the upper left corner (pixel) : " corner_y
     convert -crop "${width}x${height}+${corner_x}+${corner_y}" example00001.png  tmp_crop.png
     gnome-open tmp_crop.png
 
