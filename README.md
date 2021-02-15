@@ -8,7 +8,7 @@ You can cut out frames from video file by specified fps and cropping area.
 
 `input the file name : (YOUR VIDEO FILE NAME)`
 
-Now you can see the image of parameters you set for cropping.
+Now you can see the image of parameters you set for cropping, and also for the size of the input images.
 Look at that and enter each parameters like below.
 ```
 width (pixel) : (CROPPING WIDTH)

@@ -26,6 +26,15 @@ echo -e "----------------------------------\n\n"
 
 during_check=true
 
+geometry=$(identify -verbose example00001.png | grep "Page geometry: ")
+IFS=:
+geometry_size=(${geometry})
+IFS=x
+geometry_arr_x=(${geometry_size[1]})
+IFS=+
+geometry_arr_y=(${geometry_arr_x[1]})
+echo -e "The size of input video file is width:${geometry_arr_x[0]} pixel and height: ${geometry_arr_y[0]} pixel \n"
+
 # TODO tmpでおく名前のファイルが該当ディレクトリに事前に存在しないか確認
 while "${during_check}"
 do
