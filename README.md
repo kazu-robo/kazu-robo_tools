@@ -3,6 +3,10 @@
 ## frame_cutter.sh
 You can cut out frames from video file by specified fps and cropping area.
 
+### needed package
+You need to install `ffmpeg`.
+`$ sudo apt install ffmpeg`
+
 ### usage
 `$ ./frame_cutter.sh`
 
