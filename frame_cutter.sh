@@ -6,6 +6,7 @@ read -p "input the file name : " file # file is mp4 for example
 # TODO tmpでおく名前のファイルが該当ディレクトリに事前に存在しないか確認
 # if your video is shorter than 1 sec, change fps bigger than (1/video_length)
 ffmpeg -i $file -ss 0 -f image2 -vf fps=1 example%05d.png
+gnome-open example00001.png
 
 echo -e "\n\n"
 echo "------------------------------ usage ------------------------------"
