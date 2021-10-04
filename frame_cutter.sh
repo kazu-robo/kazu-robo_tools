@@ -67,5 +67,8 @@ rm tmp_crop.png example*.png tmp_output*.png
 # killall eog # eogという名前の全プロセスの終了
 # pkill eog # eogを名前に含む全プロセスの終了
 # TODO ps aux なりなんなりからパイプライン、直前のeogをkillしたい
-
+read -p "pkill eog? (y/N) [!!caution!! if y, all eog windows will be killed]: " yn
+    case "$yn" in
+        [yY]*) pkill eog
+    esac
 
