@@ -10,7 +10,15 @@ You need to install `ffmpeg`.
 ### usage
 `$ ./frame_cutter.sh`
 
-`input the file name : (YOUR VIDEO FILE NAME)`
+`input the file name : (INPUT YOUR VIDEO FILE NAME)`
+
+#### NOTE
+If your video file is shorter than 1 second, error below might occurs.
+
+`Output file is empty, nothing was encoded (check -ss / -t / -frames parameters if used)`
+
+In this case, you should change line 8 of frame_cutter.sh (which is the first ffmpeg command in the file).
+If you set fps argument larger enough, this error would be fixed.
 
 Now you can see the image of parameters you set for cropping, and also for the size of the input images.
 Look at that and enter each parameters like below.
