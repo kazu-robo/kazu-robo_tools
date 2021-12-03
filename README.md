@@ -42,6 +42,17 @@ Then, you can set fps, output file name, starting second of cutting out, and tim
 fps (frame per second) : (FPS you want to cut out)
 output file name : (OUTPUT FILE NAME)
 start second [sec]: (STARTING TIME)
-time length of cutting out [sec]: (TIME LENGTH)
+time length of cutting out [sec]: (TIME LENGTH)jump10cm_withProtectionCircuit.movjump10cm_withProtectionCircuit.mov
 ```
 Finally, you get directory of your entered output file name, and cut out images are under there.
+
+## trouble shooting
+If there are not enough nubers of croped files and the following error messages are printed, 
+
+`convert-im6.q16: cache resources exhausted ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+You should edit `/etc/ImageMagick-6/policy.xml`.
+
+Find line like `<policy domain="resource" name="memory" value="256MiB"/>` and change to something like `<policy domain="resource" name="memory" value="4GiB"/>` .
+
+If the value is not enough, you should edit to higher value. You should check your machine's memory when you edit this file.
